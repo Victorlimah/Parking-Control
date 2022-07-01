@@ -12,5 +12,4 @@ public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, U
   // O JpaRepository fornece métodos para acessar o banco de dados.
   // Assim não precisamos fazer as queries manualmente.
 
-
 }
