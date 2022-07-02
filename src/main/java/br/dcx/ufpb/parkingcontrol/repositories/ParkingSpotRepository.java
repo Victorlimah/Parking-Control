@@ -12,4 +12,8 @@ public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, U
   // O JpaRepository fornece métodos para acessar o banco de dados.
   // Assim não precisamos fazer as queries manualmente.
 
+  boolean existsByLicensePlateCar(String licensePlateCar);
+  boolean existsByParkingSpotNumber(String parkingSpotNumber);
+  boolean existsByApartamentAndBlock(String apartament, String block);
+
 }

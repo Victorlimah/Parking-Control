@@ -31,6 +31,19 @@ public class ParkingSpotController {
 
   @PostMapping
   public ResponseEntity<Object> saveParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotDto) {
+
+    if(parkingSpotService.existsByLicensePlateCar(parkingSpotDto.getLicensePlateCar())) {
+      return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Lincese Plate Car is already registered");
+    }
+
+    if(parkingSpotService.existsByParkingSpotNumber(parkingSpotDto.getParkingSpotNumber())) {
+      return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot Number is already in use");
+    }
+
+    if(parkingSpotService.existsByApartamentAndBlock(parkingSpotDto.getApartament(), parkingSpotDto.getBlock())) {
+      return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot is already registered from this apartament and block");
+    }
+
     var parkingSpotModel = new ParkingSpotModel();
 
     BeanUtils.copyProperties(parkingSpotDto, parkingSpotModel);
