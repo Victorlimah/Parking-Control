@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import javax.transaction.Transactional;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.dcx.ufpb.parkingcontrol.models.ParkingSpotModel;
@@ -38,8 +39,8 @@ public class ParkingSpotService {
     return parkingSpotRepository.existsByApartamentAndBlock(apartament, block);
   }
 
-  public List<ParkingSpotModel> findAll() {
-    return parkingSpotRepository.findAll();
+  public List<ParkingSpotModel> findAll(Pageable pageable) {
+    return parkingSpotRepository.findAll(pageable).getContent();
   }
 
   public Optional<ParkingSpotModel> findById(UUID id) {
