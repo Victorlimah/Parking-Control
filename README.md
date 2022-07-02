@@ -23,11 +23,11 @@
 
 Nesse projeto desenvolvi um sistema de organização de vagas para estacionamento para um condomínio.
 
-  - Cadastrar registro de estacionamento | **POST '/parking-post'**
-  - Ver todos os registros cadastrados (com paginação) | **GET '/parking-post'**
-  - Ver um registro pelo ID | **GET '/parking-post/:ID'**
-  - Alterar um registro de estacionameto | **PUT 'parking-post/:ID'**
-  - Deletar um registro de estacionamento | **DELETE '/parking-post/:ID'**
+  - Cadastrar registro de estacionamento | **POST '/parking-spot'**
+  - Ver todos os registros cadastrados (com paginação) | **GET '/parking-spot'**
+  - Ver um registro pelo ID | **GET '/parking-spot/:ID'**
+  - Alterar um registro de estacionameto | **PUT 'parking-spot/:ID'**
+  - Deletar um registro de estacionamento | **DELETE '/parking-spot/:ID'**
 
 
 <!-- CONTACT -->
