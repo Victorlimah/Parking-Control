@@ -1,6 +1,8 @@
 package br.dcx.ufpb.parkingcontrol.services;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import javax.transaction.Transactional;
 
@@ -38,5 +40,9 @@ public class ParkingSpotService {
 
   public List<ParkingSpotModel> findAll() {
     return parkingSpotRepository.findAll();
+  }
+
+  public Optional<ParkingSpotModel> findById(UUID id) {
+    return parkingSpotRepository.findById(id);
   }
 }
