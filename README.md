@@ -4,7 +4,7 @@
 <div align="center">
     <img src="https://img.freepik.com/vetores-gratis/modelo-com-etiqueta-de-icone-de-logotipo-de-estacionamento-azul-estacionamento-em-fundo-branco_100456-5957.jpg?w=2000" alt="Logo" width="120">
 
-<h3 align="center">Parking-Spot</h3>
+<h3 align="center">Parking-Control</h3>
   <p align="center">
    <strong>1º</strong> Projeto em springboot
 </div>
